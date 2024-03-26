@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+
+html,body {
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*overflow-y: hidden;*/
+}
+
+header {
+    padding: 1% 0;
+}
+
+.logo {
+    width: 70%;
+    border-radius: 50px;
+}
+
+.menu {
+    width: 30%;
+    text-align: right;
+    padding-top: 30px;
+}
+
+.menu a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 9px;
+}
+
+.titulo {
+    margin-top: 20px;
+    color: black;
+    letter-spacing: -0,9px;
+    font-family: "open-sans", sans-serif;
+    font-size: 1.375em;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #13b4f3;
+    font-weight: bold;
+    font-size: 1.27em;
+}
+
+.um {
+    font-size: 1rem;
+    padding-top: 25px;
+}
+
+p {
+    color: rgb(0, 0, 0);
+}
+
+title {
+    color: rgb(0, 0, 0);
+}
+
+.conteiner1 {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    width: 100%;
+    box-sizing: border-box;
+    align-items: baseline;
+    display: grid   ;  
+    grid-template-columns: 1fr 1fr 1fr;  
+    grid-template-rows: 50px 50px;
+
+}
+
+.livros {
+    font-size: 1rem;
+    background-color: #13b4f3;
+    padding-top: 2em;
+}
+
+.imagem {
+    max-width: 205px;
+    margin: 50px;
+    margin-bottom: 5px;
+}
+
+.A {
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.25;
+    font-weight: 400;
+    color: black;
+    overflow: hidden;
+    text-align: center;
+    height: 2.5em;
+    border-radius: 35%;
+    background: #fff;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+}
+
+.assimqueacaba {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+
+.verity {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.ladofeio {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.acabaaqui {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.conteiner2 {
+        padding-left: calc(50% - 600px);
+        padding-right: calc(50% - 600px);
+        width: 100%;
+        box-sizing: border-box;
+        align-items: baseline;
+        display: grid;  
+        grid-template-columns: 1fr 1fr 1fr;  
+        grid-template-rows: 50px 50px;
+}
+
+.livros2 {
+    font-size: 1rem;
+    background-color: #13b4f3;
+    padding-top: 2em;
+    margin-top: 20px;
+}
+
+.corvo {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.leopardo {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.serpente {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.orgulho {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.conteiner3 {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+    width: 100%;
+    box-sizing: border-box;
+    align-items: baseline;
+    display: grid;  
+    grid-template-columns: 1fr 1fr 1fr;  
+    grid-template-rows: 50px 50px;
+
+}
+
+.livros3 {
+    font-size: 1rem;
+    background-color: #13b4f3;
+    padding-top: 2em;
+    margin-top: 20px;
+}
+
+.heart {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.conectadas {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.vermelho {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+.quinzedias {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 2.5em;
+    margin-left: 50px;
+}
+
+  .form button{
+    color: #13b4f3;
+    background-color: blue;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+h4 {
+    display: flex;
+    justify-content: center;
+}
+
+.texto {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+li {
+    background-color: #fff;
+    border-radius: 3ch;
+}
+.text {
+    margin: 10px;
+}
+

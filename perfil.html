@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados/Perfil - Get Job</title>
+    <link rel="stylesheet" href="perfil.css">
+</head>
+
+<body class="um">
+    <div>
+        <h1 id="titulo">Preenchimento de Dados e Montagem de Perfil</h1>
+        <p id="subtitulo">Monte seu Perfil e Informe Seus Dados</p>
+        <br>
+    </div>
+
+    <form>
+        <fieldset class="grupo">
+            <div class="campo">
+                <label for="nome"><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="nome">
+            </div>
+
+            <div class="campo">
+                <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                <input type="text" surname="sobrenome" id="sobrenome">
+            </div>
+
+            <div class="campo">
+                <label for="nomedeusuario"><strong>Nome de Usuário:</strong></label>
+                <input type="text" username="nomedeusuario" id="nomedeusuario">
+            </div>
+
+            <div class="campo">
+                <label for="idade"><strong>Idade do Usuário:</strong></label>
+                <input type="text" age="idade" id="idade">
+            </div>
+
+            <div class="campo">
+                <label for="cpf"><strong>CPF do Usuário:</strong></label>
+                <input type="text" age="idade" id="cpf">
+            </div>
+
+            <div class="campo">
+                <label for="cnpj"><strong>CNPJ:</strong></label>
+                <input type="text" age="idade" id="cnpj">
+            </div>
+
+        </fieldset>
+
+        <div class="campo">
+            <label><strong>O que você é?</strong></label>
+            <label>
+                <input type="radio" name="davweb" id="emp" value="Empresário(a)">Dono de negócio ou empresa
+            </label>
+            <label>
+                <input type="radio" name="davweb" id="des" value="Desempregado(a)">Desempregado(a)
+            </label>
+        </div>
+
+        <br>
+
+        <fieldset class="grupo">
+            <div id="check">
+                <label>Selecione seu grau de Escolaridade:</label><br><br>
+                <input type="checkbox" id="scholl" name="Grau de Escolaridade" value="Fundamental Completo">
+                <label for="">Fundamental Completo</label>
+                <input type="checkbox" id="scholl" name="Grau de Escolaridade" value="Ensino Médio Completo">
+                <label for="">Ensino Médio Completo</label>
+                <input type="checkbox" id="scholl" name="Grau de Escolaridade" value="Graduado">
+                <label for="">Graduado</label>
+                <input type="checkbox" id="scholl" name="Grau de Escolaridade" value="Nenhum Estudo">
+                <label for="">Nenhum Estudo</label>
+            </div>
+        </fieldset>
+
+        <!--<a href="planos.html" class="tres">Concluído</a> -->
+        <input type="button" value="Cadastrar" class="tres" onclick="cadastrar()">
+
+        <script> function cadastrar() {
+                var Empresário = document.getElementById("emp").checked;
+                var Desempregado = document.getElementById("des").checked;
+
+                if (Empresário) {
+                    window.location.href = "./planoscomerciantes.html";
+                } else if (Desempregado) {
+                    window.location.href = "./planosdesempregados.html";
+                } else {
+                    alert("Por favor, selecione uma opção válida.");
+                }
+            }
+        </script>
+    </form>
+
+    <script src="jquery-3.7.1.min.js"></script>
+
+</body>
+
+</html>

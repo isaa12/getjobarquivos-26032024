@@ -1,0 +1,54 @@
+body {
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg,#9dd2e2 35%, rgb(39, 145, 231) 100%);
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    text-align: center;
+  }
+  
+  form {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #1562f1;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  #experiencia-container, #formacao-container {
+    border: 1px solid #1562f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .experiencia-item, .formacao-item {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 5px 10px;
+    border: 1px solid #1562f1;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1562f1;
+  }
+  

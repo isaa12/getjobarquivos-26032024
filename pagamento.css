@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0%;
+}
+    
+.pagamento {
+    display: flex;
+    max-width: 960px;
+    padding: 0 2%;
+    margin: 90px auto;
+    justify-content: space-around;
+}
+
+.descricao-pagamento {
+    width: 40%;
+}
+
+.descricao-pagamento h3{
+    color: rgb(140,140,140);
+}
+
+.form-pagamento {
+    padding: 30px 30px 80px 30px;
+    -webkit-box-shadow: -8px 5px 15px 5px #c7c7c7;
+    box-shadow: -8px 5px 15px 5px #c7c7c7;
+    width: 50%;
+}
+
+.form-pagamento form{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.form-100 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form-50 {
+    width: 50%;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-pagamento label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(140,140,140);
+}
+
+.form-pagamento input[type=text]{
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    color: black;
+}
+
+.form-pagamento input[type=submit]{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    cursor: pointer;
+    background-color: #13b4f3;
+    color: white;
+}
+
+button {
+    background-color: #13b4f3;
+    padding: 15px;
+    width: 15%;
+    border-radius: 10px;
+    color: #c7c7c7;
+    margin-left: 45%;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: deepskyblue;
+}
+
+
+.tres{
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #13b4f3;
+    border: 7px;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}

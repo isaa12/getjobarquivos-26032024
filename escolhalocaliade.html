@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="escolhalocalidade.css">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela do Usuário</title>
+
+    
+</head>
+<body>
+    <h1>Faça a escolha da localidade da qual você deseja conseguir uma vaga de emprego!</h1>
+    <form class="choice">
+    <div class="um">
+    <div style="width: 200px; float: left;">
+        <div class="dois">
+        <label for="country" class="div-sty">Estado:</label><br />
+        <select name="UF" id="UF" required>
+        </select>
+        <br />
+        <br />
+    </div>
+        <div class="tres">
+        <label for="state" >Cidade:</label><br />
+        <select name="cidade" id="cidade">
+            <option value="">SELECIONE</option>
+        </select>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <a href="inicio.desempregados.html" class="tres">Selecionar</a>
+    </div>
+
+    
+    <script>
+        $(document).ready(function(){
+
+carregar_dados_json('UF');
+
+function carregar_dados_json(elemento, grupo)
+{
+ var html_do_select = '';
+ var estados = []; //array para filtrar estados sem repetição 
+ $.getJSON('https://api.npoint.io/cca1afd7773c92c72f42', function(data){
+ 
+
+
+  html_do_select += '<option value="">SELECIONE</option>';
+  $.each(data.cidade, function(key, value){
+  if ($.inArray(value.estado, estados) == -1) {
+         estados.push(value.estado);
+    
+    if(elemento == 'UF')
+     { 
+          html_do_select += '<option value="'+value.estado+'">'+value.estado+'</option>';  
+     }
+  }
+  if(elemento == 'cidade')
+   {
+     if(value.estado == grupo)
+     {
+       html_do_select += '<option value="'+value.nome+'">'+value.nome+'</option>';
+     }
+   }
+  });
+  $('#'+elemento).html(html_do_select);
+ });
+}
+$(document).on('change', '#UF', function(){
+     var UF = $(this).val();
+     if(UF != '')
+     {
+        carregar_dados_json('cidade', UF);
+     }
+     else
+     {
+        $('#cidade').html('<option value="">SELECIONE</option>');
+     }
+    });
+});
+    </script>
+
+    </div>
+</form>
+    
+</body>
+</html>

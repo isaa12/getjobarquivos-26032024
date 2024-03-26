@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro de Vagas</title>
+<style>
+  body { 
+    font-family: Arial,  sans-serif; 
+    background-color: black ;
+     color: #fff;
+   }
+
+  .container { 
+    width: 8%; 
+    margin: auto; 
+  }
+
+  header { background: #0000FF; 
+    color: white;
+     padding: 10px 0;
+      text-align: center; 
+      border-radius: 100px;
+    }
+
+  form { 
+    margin-top: 20px;
+   }
+
+  label { display: block;
+     margin: 10px 0;
+      color: #fff;
+     }
+
+  input, textarea {
+     width: 80%;
+     padding: 10px;
+    border-radius: 10px ;
+     margin-left: 0%;
+     }
+
+  button { background: #0000FF;
+     color: white; 
+     padding: 10px 15px; 
+     border: none;
+      cursor: pointer;
+      border-radius: 10px
+     }
+
+  button:hover { 
+    background: #000099;
+   }
+
+  #vagaInfo { 
+    border-radius: 10px;
+    width: 80%;
+    background-color: #333;
+     padding: 15px;
+      margin-top: 20px;
+     }
+
+     div{
+      margin-top: 50px ;
+     }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Cadastro de Vagas</h1>
+</header>
+
+<div class="container">
+  <form id="vagaForm">
+
+    <div><label for="titulo">Título da Vaga:</label>
+    <input type="text" id="titulo" name="titulo" required>
+  </div> 
+  <div>
+    <label for="descricao">Descrição:</label>
+    <textarea id="descricao" name="descricao" required></textarea>
+</div>
+<div>
+    <label for="salario">Salário:</label>
+    <input type="number" id="salario" name="salario">
+</div>
+<div>
+    <label for="imagem">Imagem da Vaga:</label>
+    <input type="file" id="imagem" name="imagem">
+</div>
+    <p><button type="submit">Cadastrar Vaga</button></p>
+  </form>
+
+  <div id="vagaInfo"></div>
+</div>
+
+<script>
+document.getElementById('vagaForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  var titulo = document.getElementById('titulo').value;
+  var descricao = document.getElementById('descricao').value;
+  var salario = document.getElementById('salario').value;
+
+  var vagaInfo = document.getElementById('vagaInfo');
+  vagaInfo.innerHTML = '<h2>' + titulo + '</h2>' + '<p>' + descricao + '</p>' + '<p>Salário: ' + salario + '</p>';
+});
+</script>
+
+</body>
+</html>

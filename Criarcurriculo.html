@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Currículo</title>
+  <link rel="stylesheet" href="criarcurriculo.css">
+</head>
+<body>
+  <h1>Crie o seu currículo</h1>
+  <br>
+  <form action="/submit" method="post">
+    <label for="nome">Nome Completo:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Digite seu email">
+    <br>
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu telefone">
+    <br>
+    <label for="objetivo">Objetivo profissional:</label>
+    <textarea id="objetivo" name="objetivo" placeholder="Descreva seu objetivo profissional"></textarea>
+    <br>
+    <label for="experiencia">Experiência profissional:</label>
+    <div id="experiencia-container">
+      <div class="experiencia-item">
+        <input type="text" name="cargo[]" placeholder="Cargo">
+        <input type="text" name="empresa[]" placeholder="Empresa">
+        <input type="text" name="periodo[]" placeholder="Período">
+        <textarea name="descricao[]" placeholder="Descrição das responsabilidades"></textarea>
+      </div>
+    </div>
+    <br>
+    <button type="button" onclick="addExperiencia()">Adicionar experiência</button>
+    <br>
+    <label for="formacao">Formação acadêmica:</label>
+    <div id="formacao-container">
+      <div class="formacao-item">
+        <input type="text" name="instituicao[]" placeholder="Instituição">
+        <input type="text" name="curso[]" placeholder="Curso">
+        <input type="text" name="periodo[]" placeholder="Período">
+      </div>
+    </div>
+    <br>
+    <button type="button" onclick="addFormacao()">Adicionar formação</button>
+    <br>
+    <input type="submit" value="Enviar">
+    <br>
+  </form>
+
+  <script>
+    const experienciaContainer = document.getElementById("experiencia-container");
+const formacaoContainer = document.getElementById("formacao-container");
+
+function addExperiencia() {
+  const experienciaItem = document.createElement("div");
+  experienciaItem.classList.add("experiencia-item");
+
+  experienciaItem.innerHTML = `
+    <input type="text" name="cargo[]" placeholder="Cargo">
+    <input type="text" name="empresa[]" placeholder="Empresa">
+    <input type="text" name="periodo[]" placeholder="Período">
+    <textarea name="descricao[]" placeholder="Descrição das responsabilidades"></textarea>
+  `;
+
+  experienciaContainer.appendChild(experienciaItem);
+}
+
+function addFormacao() {
+  const formacaoItem = document.createElement("div");
+  formacaoItem.classList.add("formacao-item");
+
+  formacaoItem.innerHTML = `
+    <input type="text" name="instituicao[]" placeholder="Instituição">
+    <input type="text" name="curso[]" placeholder="Curso">
+    <input type="text" name="periodo[]" placeholder="Período">
+  `;
+
+  formacaoContainer.appendChild(formacaoItem);
+}
+
+  </script>
+</body>
+</html>

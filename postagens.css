@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(#e6e5f5);
+  }
+  
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .header {
+    background-color: #13b4f3;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 30px;
+    border: 1px solid #ccc;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  button {
+    background-color:  #13b4f3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 1000px;
+  }
+
+  
+.profile-img{
+    width: 120px;
+    padding-top: 10px;
+  }
+  

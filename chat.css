@@ -1,0 +1,90 @@
+:root{
+  --dark: #0c0c0c;
+  --white: #fff;
+  --purple: #2727a8;
+  --gray: #949494;
+  --gray2: #cccc;
+
+}
+
+body{
+  background-image: linear-gradient(#1562f1,#e6e5f5);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 90vh;
+}
+
+.index{
+  background-color: var(--white);
+  margin-top: 3rem; 
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 600px;
+  max-height: 800px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.header{
+  background-color: var(--purple);
+  border-radius: 10px 10px 0 0;
+  color: var(--white);
+  font-size: 1.4rem;
+  size: 5px;
+}
+
+.footer{
+  background-color: var(--purple);
+  padding: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+input{
+  width: 50%;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#btn-submit{
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  padding: 10px;
+}
+
+
+#btn-submit:hoover{
+  background-color: var(--gray);
+  cursor: pointer;
+  transition: .4s;
+}
+
+.messages {
+  height: 200px;
+  overflow-y: scroll;
+  font-size: 20px;
+  padding-left: 50%;
+}
+
+.profile-img{
+  width: 120px;
+  border-radius: 60%;
+  border: #a734d2 3px solid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: translateY(-65px);
+  padding-bottom: 0%;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 0px;
+  padding-bottom: 20px;
+  font-size: 25px;
+}

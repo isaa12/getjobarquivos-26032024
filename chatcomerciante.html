@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chat.css">
+  <title>Chat</title>
+</head>
+<body>
+  <div class="index">
+<div class="header">
+  <img src="profile.pic" alt="perfil" class="profile-img">
+  <h1>Rafael de Sousa Casé</h1>
+  </div>
+  <p id="status"></p>
+  <div id="historic">
+  </div>
+
+  <div class="chat">
+    <div class="messages">
+      </div>
+    <div class="footer">
+    <div class="input">
+      <input type="text" id="message" placeholder="Digite sua mensagem...">
+      <button type="button" id="send">Enviar</button>
+    </div>
+  </div>
+  </div>
+
+  <script>
+    const chat = document.querySelector(".chat");
+    const messages = document.querySelector(".messages");
+    const input = document.querySelector("#message");
+    const sendButton = document.querySelector("#send");
+
+// Função para enviar uma mensagem
+    function sendMessage() {
+  // Obtém a mensagem do usuário
+    const message = input.value;
+
+  // Cria um elemento de mensagem
+    const messageElement = document.createElement("div");
+    messageElement.classList.add("message");
+
+  // Adiciona o texto da mensagem ao elemento
+    messageElement.textContent = message;
+
+  // Adiciona o elemento de mensagem à área de mensagens
+    messages.appendChild(messageElement);
+
+  // Limpa a caixa de entrada
+    input.value = "";
+}
+
+// Evento de clique no botão enviar
+   sendButton.addEventListener("click", sendMessage);
+
+   // Função para receber mensagens
+function receiveMessage(message) {
+  // Cria um elemento de mensagem
+  const messageElement = document.createElement("div");
+  messageElement.classList.add("message");
+
+  // Adiciona o texto da mensagem ao elemento
+  messageElement.textContent = message;
+
+  // Adiciona o elemento de mensagem à área de mensagens
+  messages.appendChild(messageElement);
+}
+
+ // Evento de envio do input
+input.addEventListener("submit", (event) => {
+  // Cancela o envio padrão do formulário
+  event.preventDefault();
+
+  // Envia a mensagem ao servidor
+  sendMessage();
+});
+  </script>
+    </div>
+
+</body>
+</html>
